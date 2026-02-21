@@ -1,0 +1,88 @@
+:root {
+  --custom-user-background: url("/media/assets/background.webp");
+
+  --ak-accent: #8b0000 !important;
+
+  --pf-global--link--Color: #ac0000 !important;
+  --pf-global--link--Color--hover: #8b0000 !important;
+
+  --pf-global--primary-color--100: #8b0000 !important;
+  --pf-global--primary-color--200: #530000 !important;
+
+  --pf-global--BackgroundColor--150: #b1afaf !important;
+}
+
+.pf-c-button {
+  --pf-global--primary-color--100: #8b0000;
+  --pf-global--primary-color--200: #530000;
+  --pf-global--BorderRadius--sm: 15px;
+}
+
+.pf-c-form-control {
+  --pf-c-form-control--BorderRadius: 10px;
+}
+
+.pf-c-input-group {
+  --pf-c-input-group--BackgroundColor: transparent;
+}
+
+/*===============
+  Forced Styles
+===============*/
+
+/*  User Interface Background */
+.pf-c-page .background-wrapper {
+  background-image: var(--custom-user-background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: white;
+
+  .background-default-slant {
+    display: none;
+  }
+}
+
+/* User Interface Header */
+header.pf-c-page__header {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+input[name="application-search"] {
+  background-color: white;
+  border-radius: 10px;
+}
+
+/*===============
+  Stable Styles
+===============*/
+
+/* Login */
+ak-flow-executor::part(flow-main) {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+ak-flow-executor::part(brand-links) {
+  visibility: hidden;
+}
+
+/* User Interface */
+ak-library-impl::part(card) {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+ak-app-icon::part(icon) {
+  height: 100%;
+}
